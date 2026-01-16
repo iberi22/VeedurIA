@@ -1,0 +1,67 @@
+name: Data Ingestion & Analysis Pipeline
+
+on:
+  schedule:
+    # Run at 08:00 UTC (3:00 AM Colombia)
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  ingest-and-analyze:
+    name: Ingest and Analyze SECOP II Data
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: ./backend
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install Rust Toolchain
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: stable
+          components: clippy, rustfmt
+
+      - name: Cache Cargo Registry
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.cargo/bin
+            ~/.cargo/registry
+            ~/.cargo/git
+            backend/target
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+
+      - name: Login to Hugging Face
+        run: |
+          mkdir -p ~/.cache/huggingface
+          echo "${{ secrets.HF_TOKEN }}" > ~/.cache/huggingface/token
+        shell: bash
+
+      - name: Run Backend Pipeline
+        env:
+          SOCRATA_APP_TOKEN: ${{ secrets.SOCRATA_APP_TOKEN }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: cargo run --release
+
+      - name: Commit Daily Report
+        if: success()
+        run: |
+          cd ..
+          git config --global user.name "VeedurIA Bot"
+          git config --global user.email "bot@veedur-ia.co"
+
+          # Check if report exists and has changed
+          if [[ -f "frontend/public/daily_report.json" ]]; then
+            git add frontend/public/daily_report.json
+            git commit -m "data: update daily report $(date +'%Y-%m-%d') [skip ci]" || echo "No changes to commit"
+            git push
+          else
+            echo "No report generated."
+          fi

@@ -53,6 +53,13 @@ async fn main() -> Result<()> {
         Err(e) => warn!("Falló la carga del modelo NLP: {}. Continuando sin IA.", e),
     }
 
+    // Output: Generate daily_report.json
+    let output_path = "../frontend/public/daily_report.json";
+    info!("Guardando reporte en: {}", output_path);
+
+    let json_data = serde_json::to_string_pretty(&contracts)?;
+    tokio::fs::write(output_path, json_data).await?;
+
     info!("Pipeline de ingestión completado.");
     Ok(())
 }
