@@ -135,8 +135,8 @@ impl SocrataClient {
     }
 }
 
-/// Main entry point for data ingestion
-pub async fn run(token: &str) -> Result<()> {
+    /// Main entry point for data ingestion
+pub async fn run(token: &str) -> Result<Vec<ContratoSecop>> {
     let app_token = if token == "ANONYMOUS" {
         None
     } else {
@@ -150,7 +150,7 @@ pub async fn run(token: &str) -> Result<()> {
 
     info!("Sample contract: {:?}", contratos.first());
 
-    Ok(())
+    Ok(contratos)
 }
 
 #[cfg(test)]
