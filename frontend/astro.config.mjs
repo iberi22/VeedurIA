@@ -6,6 +6,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://iberi22.github.io',
+  base: '/VeedurIA-Ciudadana',
   integrations: [svelte()],
 
   vite: {

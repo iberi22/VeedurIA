@@ -19,8 +19,9 @@ async fn main() -> Result<()> {
 
     info!("Iniciando ingestión de datos desde SECOP II...");
 
-    // TODO: Implement ingestion pipeline
-    // obs::ingest::run(&socrata_token).await?;
+    // Run data ingestion
+    obs::ingest::run(&socrata_token).await?;
 
+    info!("Pipeline de ingestión completado.");
     Ok(())
 }
