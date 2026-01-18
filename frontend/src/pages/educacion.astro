@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <Layout title="Educación | Veeduría Ciudadana">
@@ -15,7 +16,7 @@ import Layout from '../layouts/Layout.astro';
 			<p class="text-gray-400">Estamos preparando tutoriales sobre control fiscal y explicaciones detalladas sobre la Ley de Benford y nuestros modelos de IA.</p>
 
 			<div class="mt-8">
-				<a href="/" class="glass-button">Volver al Inicio</a>
+				<a href={`${base}/`} class="glass-button">Volver al Inicio</a>
 			</div>
 		</div>
 	</div>
