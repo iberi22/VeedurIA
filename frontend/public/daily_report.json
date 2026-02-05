@@ -1,5 +1,25 @@
 [
   {
+    "id_contrato": "CO1.PCCNTR.7801901",
+    "nombre_entidad": "ALCALDIA MUNICIPIO DE SOPETRAN",
+    "nit_entidad": "890981080",
+    "departamento": "No Definido",
+    "ciudad": "No Definido",
+    "objeto_del_contrato": "No definido",
+    "tipo_de_contrato": "Suministros",
+    "modalidad_de_contratacion": "Mínima cuantía",
+    "valor_del_contrato": "39100000",
+    "nombre_contratista": null,
+    "nit_contratista": null,
+    "fecha_de_firma": null,
+    "fecha_de_inicio_del_contrato": null,
+    "duracion": null,
+    "risk_level": "Medio",
+    "red_flags": [
+      "Objeto Indefinido"
+    ]
+  },
+  {
     "id_contrato": "CO1.PCCNTR.815779",
     "nombre_entidad": "INVIAS",
     "nit_entidad": "800215807",
@@ -476,6 +496,27 @@
     "nit_entidad": "891180009",
     "departamento": "Huila",
     "ciudad": "Neiva",
+    "objeto_del_contrato": "No definido",
+    "tipo_de_contrato": "Prestación de servicios",
+    "modalidad_de_contratacion": "Contratación directa",
+    "valor_del_contrato": "0",
+    "nombre_contratista": null,
+    "nit_contratista": null,
+    "fecha_de_firma": null,
+    "fecha_de_inicio_del_contrato": null,
+    "duracion": null,
+    "risk_level": "Alto",
+    "red_flags": [
+      "Valor Cero",
+      "Objeto Indefinido"
+    ]
+  },
+  {
+    "id_contrato": "CO1.PCCNTR.325641",
+    "nombre_entidad": "AGENCIA NACIONAL DE DEFENSA JURÍDICA DEL ESTADO",
+    "nit_entidad": "900507741",
+    "departamento": "Distrito Capital de Bogotá",
+    "ciudad": "No Definido",
     "objeto_del_contrato": "No definido",
     "tipo_de_contrato": "Prestación de servicios",
     "modalidad_de_contratacion": "Contratación directa",
@@ -1360,24 +1401,6 @@
     ]
   },
   {
-    "id_contrato": "CO1.PCCNTR.5027713",
-    "nombre_entidad": "AGENCIA NACIONAL DE DEFENSA JURÍDICA DEL ESTADO",
-    "nit_entidad": "900507741",
-    "departamento": "Distrito Capital de Bogotá",
-    "ciudad": "No Definido",
-    "objeto_del_contrato": "Prestación de servicios profesionales para la ejecución del plan de Gestión Ambiental de la Agencia Nacional de Defensa Jurídica del Estado.",
-    "tipo_de_contrato": "Prestación de servicios",
-    "modalidad_de_contratacion": "Contratación directa",
-    "valor_del_contrato": "31055683",
-    "nombre_contratista": null,
-    "nit_contratista": null,
-    "fecha_de_firma": null,
-    "fecha_de_inicio_del_contrato": null,
-    "duracion": null,
-    "risk_level": "Bajo",
-    "red_flags": []
-  },
-  {
     "id_contrato": "CO1.PCCNTR.2835082",
     "nombre_entidad": "MUNICIPIO DE ARMENIA QUINDIO",
     "nit_entidad": "890000464",
@@ -1912,24 +1935,6 @@
     "nit_contratista": null,
     "fecha_de_firma": null,
     "fecha_de_inicio_del_contrato": "2018-01-24T00:00:00.000",
-    "duracion": null,
-    "risk_level": "Bajo",
-    "red_flags": []
-  },
-  {
-    "id_contrato": "CO1.PCCNTR.6606587",
-    "nombre_entidad": "CONTRALORIA DE BOGOTA",
-    "nit_entidad": "800245133",
-    "departamento": "Distrito Capital de Bogotá",
-    "ciudad": "Bogotá",
-    "objeto_del_contrato": "Prestar servicios de apoyo a las actividades que se adelanten en la Dirección Sector Seguridad; Convivencia y Justicia de la Contraloría de Bogotá D.C.; en el\nmarco del proyecto de Inversión 8021 Meta 5",
-    "tipo_de_contrato": "Prestación de servicios",
-    "modalidad_de_contratacion": "Contratación directa",
-    "valor_del_contrato": "11000000",
-    "nombre_contratista": null,
-    "nit_contratista": null,
-    "fecha_de_firma": null,
-    "fecha_de_inicio_del_contrato": null,
     "duracion": null,
     "risk_level": "Bajo",
     "red_flags": []
